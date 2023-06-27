@@ -84,7 +84,7 @@ jobs:
             fi
             echo "pass backend-deploy-test/backend-deploy-test-server:latest"
            
-            docker login ghcr.io -u ${{ github.actor }} --p${{ secrets.GHCR_TOKEN }}
+            docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GHCR_TOKEN }}
            
             docker pull ghcr.io/cjw0824/personal-backend-server:latest
 
