@@ -1,4 +1,4 @@
-package account.entitiy;
+package com.example.demo.account.entitiy;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,11 +6,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+
 @Getter
 @Entity
 @NoArgsConstructor
-public class MemberAcccount {
+public class MemberAccount {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +19,7 @@ public class MemberAcccount {
     private String email;
     private String password;
 
-    public MemberAcccount(String email, String password) {
+    public MemberAccount(String email, String password) {
         this.email = email;
         this.password = password;
     }
