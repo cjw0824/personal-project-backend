@@ -2,7 +2,7 @@ package com.example.demo.account.service;
 
 import com.example.demo.account.controller.form.AccountLoginResponseForm;
 import com.example.demo.account.controller.form.AccountRequestForm;
-import com.example.demo.account.entitiy.MemberAccount;
+import com.example.demo.account.entity.MemberAccount;
 import com.example.demo.account.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
 package com.example.demo.account.controller.form;
 
-import com.example.demo.account.entitiy.MemberAccount;
+import com.example.demo.account.entity.MemberAccount;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

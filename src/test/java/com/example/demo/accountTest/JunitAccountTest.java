@@ -1,7 +1,6 @@
 package com.example.demo.accountTest;
 
 import com.example.demo.account.controller.form.AccountRequestForm;
-import com.example.demo.account.entitiy.MemberAccount;
 import com.example.demo.account.repository.AccountRepository;
 import com.example.demo.account.service.AccountService;
 import org.junit.jupiter.api.DisplayName;
