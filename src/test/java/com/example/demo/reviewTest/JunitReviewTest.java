@@ -1,6 +1,5 @@
 package com.example.demo.reviewTest;
 
-import com.example.demo.bord.controller.form.BordRequestForm;
 import com.example.demo.review.controller.form.ReviewRequestForm;
 import com.example.demo.review.service.ReviewService;
 import org.junit.jupiter.api.DisplayName;
@@ -17,10 +16,11 @@ public class JunitReviewTest {
     @DisplayName("테스트 리뷰 등록")
     void 테스트_리뷰_등록 () {
         final String content = "content";
+        final String placeName = "창동수영장";
         final Float starRating1 = 4f;
         final Float starRating2 = 3f;
 
-        ReviewRequestForm reviewRequestForm = new ReviewRequestForm(content, starRating1, starRating2);
+        ReviewRequestForm reviewRequestForm = new ReviewRequestForm(content, placeName, starRating1, starRating2);
         reviewService.register(reviewRequestForm);
     }
 

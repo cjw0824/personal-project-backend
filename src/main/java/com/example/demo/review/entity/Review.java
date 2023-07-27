@@ -15,11 +15,13 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String content;
+    private String placeName;
     private Float starRating1;
     private Float starRating2;
 
-    public Review(String content, Float starRating1, Float starRating2){
+    public Review(String content, String placeName, Float starRating1, Float starRating2){
         this.content = content;
+        this.placeName = placeName;
         this.starRating1 = starRating1;
         this.starRating2 = starRating2;
     }

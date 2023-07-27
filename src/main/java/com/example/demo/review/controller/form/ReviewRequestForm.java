@@ -9,10 +9,11 @@ import lombok.RequiredArgsConstructor;
 public class ReviewRequestForm {
 
     final private String content;
+    final private String placeName;
     final private Float starRating1;
     final private Float starRating2;
 
     public Review toReview() {
-        return new Review(content, starRating1, starRating2);
+        return new Review(content, placeName, starRating1, starRating2);
     }
 }
