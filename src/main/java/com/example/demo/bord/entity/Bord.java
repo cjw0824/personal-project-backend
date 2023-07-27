@@ -1,4 +1,4 @@
-package com.example.demo.board.entity;
+package com.example.demo.bord.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @Entity
 @NoArgsConstructor
-public class Board {
+public class Bord {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bordId;
@@ -18,7 +18,7 @@ public class Board {
     private String title;
     private String content;
 
-    public Board(String title, String content) {
+    public Bord(String title, String content) {
         this.title = title;
         this.content = content;
     }
