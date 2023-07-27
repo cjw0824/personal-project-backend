@@ -1,23 +1,20 @@
-package com.example.demo.bordTest;
+package com.example.demo.boardTest;
 
-import com.example.demo.account.controller.form.AccountRequestForm;
-import com.example.demo.account.repository.AccountRepository;
-import com.example.demo.account.service.AccountService;
-import com.example.demo.bord.controller.form.BordRequestForm;
-import com.example.demo.bord.repository.BordRepository;
-import com.example.demo.bord.service.BordService;
+import com.example.demo.board.controller.form.BoardRequestForm;
+import com.example.demo.board.repository.BoardRepository;
+import com.example.demo.board.service.BoardService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class JunitBordTest {
+public class JunitBoardTest {
     @Autowired
-    private BordService bordService;
+    private BoardService boardService;
 
     @Autowired
-    private BordRepository bordRepository;
+    private BoardRepository boardRepository;
 
     @Test
     @DisplayName("테스트 게시물 등록")
@@ -25,8 +22,8 @@ public class JunitBordTest {
         final String title = "title1";
         final String content = "content";
 
-        BordRequestForm bordRequestForm = new BordRequestForm(title, content);
-        bordService.register(bordRequestForm);
+        BoardRequestForm boardRequestForm = new BoardRequestForm(title, content);
+        boardService.register(boardRequestForm);
     }
 
 //    @Test
