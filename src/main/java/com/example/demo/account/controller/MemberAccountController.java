@@ -1,5 +1,6 @@
 package com.example.demo.account.controller;
 
+import com.example.demo.account.controller.form.AccountLoginResponseForm;
 import com.example.demo.account.controller.form.AccountRequestForm;
 import com.example.demo.account.entity.MemberAccount;
 import com.example.demo.account.service.AccountService;
@@ -20,5 +21,11 @@ public class MemberAccountController {
         log.info("registerAccount()");
         accountService.register(accountRequestForm);
     }
+
+//    @PostMapping("/login")
+//    public AccountLoginResponseForm login (@RequestBody AccountRequestForm accountRequestForm) {
+//        log.info("login()");
+//        return accountService.login(accountRequestForm);
+//    }
 
 }

@@ -9,6 +9,6 @@ public interface AccountService {
 
     void delete(AccountRequestForm accountRequestForm);
 
-    AccountLoginResponseForm login(AccountRequestForm accountRequestForm);
+//    AccountLoginResponseForm login(AccountRequestForm accountRequestForm);
 }
 

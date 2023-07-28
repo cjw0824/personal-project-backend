@@ -1,15 +1,18 @@
 package com.example.demo.account.controller.form;
 
 import com.example.demo.account.entity.MemberAccount;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class AccountRequestForm {
 
-    final private String email;
-    final private String password;
+    private String email;
+    private String password;
 
     public MemberAccount toMemberAccount() {
         return new MemberAccount(email, password);

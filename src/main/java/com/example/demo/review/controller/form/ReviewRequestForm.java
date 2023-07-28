@@ -1,17 +1,20 @@
 package com.example.demo.review.controller.form;
 
 import com.example.demo.review.entity.Review;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class ReviewRequestForm {
 
-    final private String content;
-    final private String placeName;
-    final private Float starRating1;
-    final private Float starRating2;
+    private String content;
+    private String placeName;
+    private Float starRating1;
+    private Float starRating2;
 
     public Review toReview() {
         return new Review(content, placeName, starRating1, starRating2);
