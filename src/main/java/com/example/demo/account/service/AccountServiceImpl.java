@@ -61,8 +61,10 @@ public class AccountServiceImpl implements AccountService {
         if (maybeAccount.get().getPassword().equals(accountRequestForm.getPassword())) {
             log.info("[로그인 성공]");
             UUID uuid = UUID.randomUUID();
+            String userEmail = maybeAccount.get().getEmail();
             System.out.println("New randomUUID: " + uuid.toString());
-            return new AccountLoginResponseForm(uuid);
+            System.out.println("userEmail: " + userEmail);
+            return new AccountLoginResponseForm(uuid, userEmail);
         } else {
             log.info("[로그인 실패] 비밀번호가 일치하지 않습니다.");
             return null;

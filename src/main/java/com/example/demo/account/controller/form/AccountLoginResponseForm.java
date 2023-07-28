@@ -9,4 +9,5 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class AccountLoginResponseForm {
     final private UUID userToken;
+    final private String email;
 }
