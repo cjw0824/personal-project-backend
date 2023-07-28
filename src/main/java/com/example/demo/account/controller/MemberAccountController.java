@@ -22,10 +22,10 @@ public class MemberAccountController {
         accountService.register(accountRequestForm);
     }
 
-//    @PostMapping("/login")
-//    public AccountLoginResponseForm login (@RequestBody AccountRequestForm accountRequestForm) {
-//        log.info("login()");
-//        return accountService.login(accountRequestForm);
-//    }
+    @PostMapping("/login")
+    public AccountLoginResponseForm login (@RequestBody AccountRequestForm accountRequestForm) {
+        log.info("login()");
+        return accountService.login(accountRequestForm);
+    }
 
 }

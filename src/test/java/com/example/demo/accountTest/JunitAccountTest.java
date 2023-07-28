@@ -37,13 +37,13 @@ public class JunitAccountTest {
 //        accountService.delete(accountRequestForm);
 //    }
 
-//    @Test
-//    @DisplayName("테스트 로그인")
-//    void 테스트_로그인 () {
-//        final String email = "test2@test.com";
-//        final String password = "test";
-//        AccountRequestForm accountRequestForm = new AccountRequestForm(email, password);
-//
-//        accountService.login(accountRequestForm);
-//    }
+    @Test
+    @DisplayName("테스트 로그인")
+    void 테스트_로그인 () {
+        final String email = "test2@test.com";
+        final String password = "test";
+        AccountRequestForm accountRequestForm = new AccountRequestForm(email, password);
+
+        accountService.login(accountRequestForm);
+    }
 }
