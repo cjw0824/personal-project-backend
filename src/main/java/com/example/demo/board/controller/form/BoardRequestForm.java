@@ -13,8 +13,9 @@ import lombok.RequiredArgsConstructor;
 public class BoardRequestForm {
     private String title;
     private String content;
+    private String userEmail;
 
     public Board toBoard() {
-        return new Board(title, content);
+        return new Board(title, content, userEmail);
     }
 }

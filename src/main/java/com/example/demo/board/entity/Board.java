@@ -15,10 +15,12 @@ public class Board {
 
     private String title;
     private String content;
+    private String userEmail;
 
-    public Board(String title, String content) {
+    public Board(String title, String content, String userEmail) {
         this.title = title;
         this.content = content;
+        this.userEmail = userEmail;
     }
 
 }
