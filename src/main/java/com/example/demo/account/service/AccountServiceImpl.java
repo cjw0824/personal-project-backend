@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.UUID;
 
+import static java.awt.SystemColor.window;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -63,7 +65,7 @@ public class AccountServiceImpl implements AccountService {
             return new AccountLoginResponseForm(uuid);
         } else {
             log.info("[로그인 실패] 비밀번호가 일치하지 않습니다.");
-            return new AccountLoginResponseForm(null);
+            return null;
         }
     }
 
