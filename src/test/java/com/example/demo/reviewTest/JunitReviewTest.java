@@ -17,10 +17,11 @@ public class JunitReviewTest {
     void 테스트_리뷰_등록 () {
         final String content = "content";
         final String placeName = "창동수영장";
+        final String userEmail = "test2@test.com";
         final Float starRating1 = 4f;
         final Float starRating2 = 3f;
 
-        ReviewRequestForm reviewRequestForm = new ReviewRequestForm(content, placeName, starRating1, starRating2);
+        ReviewRequestForm reviewRequestForm = new ReviewRequestForm(content, placeName, userEmail, starRating1, starRating2);
         reviewService.register(reviewRequestForm);
     }
 

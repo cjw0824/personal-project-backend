@@ -14,12 +14,14 @@ public class Review {
     private Long id;
     private String content;
     private String placeName;
+    private String userEmail;
     private Float starRating1;
     private Float starRating2;
 
-    public Review(String content, String placeName, Float starRating1, Float starRating2){
+    public Review(String content, String placeName, String userEmail, Float starRating1, Float starRating2){
         this.content = content;
         this.placeName = placeName;
+        this.userEmail = userEmail;
         this.starRating1 = starRating1;
         this.starRating2 = starRating2;
     }

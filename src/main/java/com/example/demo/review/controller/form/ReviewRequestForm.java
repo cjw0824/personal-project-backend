@@ -13,10 +13,11 @@ public class ReviewRequestForm {
 
     private String content;
     private String placeName;
+    private String userEmail;
     private Float starRating1;
     private Float starRating2;
 
     public Review toReview() {
-        return new Review(content, placeName, starRating1, starRating2);
+        return new Review(content, placeName, userEmail, starRating1, starRating2);
     }
 }
