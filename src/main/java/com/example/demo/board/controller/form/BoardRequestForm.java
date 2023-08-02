@@ -4,7 +4,6 @@ import com.example.demo.board.entity.Board;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @Getter
 //@RequiredArgsConstructor

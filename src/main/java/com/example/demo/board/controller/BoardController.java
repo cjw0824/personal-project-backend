@@ -3,7 +3,6 @@ package com.example.demo.board.controller;
 import com.example.demo.board.controller.form.BoardRequestForm;
 import com.example.demo.board.entity.Board;
 import com.example.demo.board.service.BoardService;
-import com.example.demo.review.entity.Review;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

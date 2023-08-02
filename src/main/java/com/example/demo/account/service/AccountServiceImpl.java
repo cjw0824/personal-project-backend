@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.UUID;
 
-import static java.awt.SystemColor.window;
-
 @Slf4j
 @Service
 @RequiredArgsConstructor
