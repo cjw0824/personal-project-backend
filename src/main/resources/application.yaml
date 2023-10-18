@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     #url: jdbc:mysql://mysql-container/deploy_test_db?allowpublickeyretrieval=true&usessl=false&serverTimezone=UTC
-    url: jdbc:mysql://localhost:3306/deploy_test_db?allowpublickeyretrieval=true&usessl=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/project_swimmingo?allowpublickeyretrieval=true&usessl=false&serverTimezone=UTC
     username: eddi
     password: eddi@123
     driver-class-name: com.mysql.cj.jdbc.Driver
