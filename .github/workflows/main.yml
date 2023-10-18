@@ -83,6 +83,7 @@ jobs:
           host: ${{ secrets.HOST_PROD }}
           username: ec2-user
           key: ${{ secrets.PRIVATE_KEY }}
+          port: 22
           script_stop : true
           script: |
             pwd
