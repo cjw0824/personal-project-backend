@@ -22,6 +22,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu' # https://github.com/actions/setup-java
+          port: ${{ secrets.PORT }}
           
       ## gradle caching
       - name: Gradle Caching
@@ -83,6 +84,7 @@ jobs:
           host: ${{ secrets.HOST_PROD }}
           username: ec2-user
           key: ${{ secrets.PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
           script_stop : true
           script: |
             pwd
