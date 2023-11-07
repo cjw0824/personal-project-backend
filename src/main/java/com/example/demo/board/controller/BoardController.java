@@ -33,4 +33,11 @@ public class BoardController {
 
         return returnedBoardList;
     }
+
+    @GetMapping("/read/{boardId}")
+    public Board readBoard (@PathVariable("boardId") Long boardId) {
+        log.info("boardRead()");
+
+        return boardService.readBoard(boardId);
+    }
 }

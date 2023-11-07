@@ -37,6 +37,13 @@ public class JunitBoardTest {
         System.out.println(testListBoard);
     }
 
+    @Test
+    @DisplayName("테스트 게시물 읽기")
+    void 테스트_게시물_읽기 () {
+        Board board = boardService.readBoard(1L);
+        System.out.println(board);
+    }
+
 //    @Test
 //    @DisplayName("테스트 회원탈퇴")
 //    void 테스트_회원탈퇴 () {
