@@ -1,5 +1,6 @@
 package com.example.demo.review.controller;
 
+import com.example.demo.board.entity.Board;
 import com.example.demo.review.controller.form.ReviewRequestForm;
 import com.example.demo.review.entity.Review;
 import com.example.demo.review.service.ReviewService;
@@ -29,6 +30,13 @@ public class ReviewController {
         log.info("returnedReviewList: " + returnedReviewList);
 
         return returnedReviewList;
+    }
+
+    @GetMapping("/read/{id}")
+    public Review readReview (@PathVariable("id") Long id) {
+        log.info("readReview()");
+
+        return reviewService.readReview(id);
     }
 }
 

@@ -1,5 +1,6 @@
 package com.example.demo.review.service;
 
+import com.example.demo.board.entity.Board;
 import com.example.demo.review.controller.form.ReviewRequestForm;
 import com.example.demo.review.entity.Review;
 
@@ -10,4 +11,5 @@ public interface ReviewService {
 
     List<Review> list();
 
+    Review readReview(Long id);
 }

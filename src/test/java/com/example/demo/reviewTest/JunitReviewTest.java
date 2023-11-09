@@ -1,6 +1,8 @@
 package com.example.demo.reviewTest;
 
+import com.example.demo.board.entity.Board;
 import com.example.demo.review.controller.form.ReviewRequestForm;
+import com.example.demo.review.entity.Review;
 import com.example.demo.review.service.ReviewService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,6 +25,13 @@ public class JunitReviewTest {
 
         ReviewRequestForm reviewRequestForm = new ReviewRequestForm(content, placeName, userEmail, starRating1, starRating2);
         reviewService.register(reviewRequestForm);
+    }
+
+    @Test
+    @DisplayName("테스트 리뷰 읽기")
+    void 테스트_리뷰_읽기 () {
+        Review review = reviewService.readReview(1L);
+        System.out.println(review);
     }
 
 }
