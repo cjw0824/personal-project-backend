@@ -1,5 +1,6 @@
 package com.example.demo.pool.service;
 
+import com.example.demo.pool.controller.form.PoolRequestForm;
 import com.example.demo.pool.entity.Pool;
 import com.example.demo.pool.repository.PoolRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ import java.util.Optional;
 public class PoolServiceImpl implements PoolService{
     final private PoolRepository poolRepository;
     @Override
-    public float[] starAvg(String placeName) {
+    public PoolRequestForm starAvg(String placeName) {
         Optional<Pool> maybePool = poolRepository.findByPlaceName(placeName);
         if(maybePool.isPresent()){
             int reviewCnt = maybePool.get().getReviewCnt();
@@ -27,11 +28,12 @@ public class PoolServiceImpl implements PoolService{
             float star1Avg = Math.round(starRating1Total/reviewCnt);
             float star2Avg = Math.round(starRating2Total/reviewCnt);
 
-            float[] starAvgArray = {star1Avg, star2Avg};
-            return starAvgArray;
+            PoolRequestForm poolRequestForm = new PoolRequestForm(star1Avg, star2Avg);
+
+            return poolRequestForm;
         } else {
-            float[] starAvgArray = {0, 0};
-            return starAvgArray;
+            PoolRequestForm poolRequestForm = new PoolRequestForm(0f, 0f);
+            return poolRequestForm;
         }
     }
 }

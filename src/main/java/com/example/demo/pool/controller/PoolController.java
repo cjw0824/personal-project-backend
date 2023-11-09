@@ -1,5 +1,6 @@
 package com.example.demo.pool.controller;
 
+import com.example.demo.pool.controller.form.PoolRequestForm;
 import com.example.demo.pool.entity.Pool;
 import com.example.demo.pool.service.PoolService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +17,7 @@ public class PoolController {
     final private PoolService poolService;
 
     @GetMapping("/detail")
-    public float[] getPooldetail(@RequestParam String placeName) {
+    public PoolRequestForm getPooldetail(@RequestParam String placeName) {
         log.info("getPooldetail()");
         return poolService.starAvg(placeName);
     }

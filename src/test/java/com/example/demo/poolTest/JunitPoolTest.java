@@ -1,5 +1,6 @@
 package com.example.demo.poolTest;
 
+import com.example.demo.pool.controller.form.PoolRequestForm;
 import com.example.demo.pool.repository.PoolRepository;
 import com.example.demo.pool.service.PoolService;
 import com.example.demo.review.controller.form.ReviewRequestForm;
@@ -20,9 +21,9 @@ public class JunitPoolTest {
     @DisplayName("수영장 평균 별점 출력")
     void print_star_avg () {
         String placeName = "창동수영장";
-        float[] starAvg = poolService.starAvg(placeName);
-        System.out.println("starAvg[0] = " + starAvg[0]);
-        System.out.println("starAvg[1] = " + starAvg[1]);
+        PoolRequestForm poolRequestForm = poolService.starAvg(placeName);
+        System.out.println("starAvg1 = " + poolRequestForm.getStarRating1Avg());
+        System.out.println("starAvg2 = " + poolRequestForm.getStarRating2Avg());
     }
 
 }

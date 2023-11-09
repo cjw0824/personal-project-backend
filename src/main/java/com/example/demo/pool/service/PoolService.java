@@ -1,9 +1,11 @@
 package com.example.demo.pool.service;
 
 
+import com.example.demo.pool.controller.form.PoolRequestForm;
+
 import java.util.List;
 
 public interface PoolService {
-    float[] starAvg(String placeName);
+    PoolRequestForm starAvg(String placeName);
 
 }
