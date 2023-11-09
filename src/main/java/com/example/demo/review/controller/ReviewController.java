@@ -1,6 +1,5 @@
 package com.example.demo.review.controller;
 
-import com.example.demo.board.entity.Board;
 import com.example.demo.review.controller.form.ReviewRequestForm;
 import com.example.demo.review.entity.Review;
 import com.example.demo.review.service.ReviewService;

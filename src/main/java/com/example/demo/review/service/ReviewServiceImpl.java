@@ -1,6 +1,5 @@
 package com.example.demo.review.service;
 
-import com.example.demo.board.entity.Board;
 import com.example.demo.pool.entity.Pool;
 import com.example.demo.pool.repository.PoolRepository;
 import com.example.demo.review.controller.form.ReviewRequestForm;
