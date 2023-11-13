@@ -37,4 +37,15 @@ public class BoardServiceImpl implements BoardService {
 
         return maybeBoard.get();
     }
+
+    @Override
+    public void deleteBoard(long boardId) {
+        Optional<Board> maybeBoard = boardRepository.findByBoardId(boardId);
+
+        if(maybeBoard.isEmpty()) {
+            log.info("정보가 없습니다!");
+        } else {
+            boardRepository.deleteById(boardId);
+        }
+    }
 }

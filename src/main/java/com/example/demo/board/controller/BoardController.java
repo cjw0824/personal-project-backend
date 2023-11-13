@@ -40,4 +40,10 @@ public class BoardController {
 
         return boardService.readBoard(boardId);
     }
+
+    @DeleteMapping("/delete/{boardId}")
+    public void deleteBoard (@PathVariable("boardId") Long boardId) {
+        log.info("deleteBoard()");
+        boardService.deleteBoard(boardId);
+    }
 }
