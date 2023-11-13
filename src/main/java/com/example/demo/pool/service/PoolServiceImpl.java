@@ -25,8 +25,8 @@ public class PoolServiceImpl implements PoolService{
             float starRating1Total = maybePool.get().getStarRating1Total();
             float starRating2Total = maybePool.get().getStarRating2Total();
 
-            float star1Avg = Math.round(starRating1Total/reviewCnt*10)/10;
-            float star2Avg = Math.round(starRating2Total/reviewCnt*10)/10;
+            float star1Avg = (float) (Math.round(starRating1Total/reviewCnt*10)/10.0);
+            float star2Avg = (float) (Math.round(starRating2Total/reviewCnt*10)/10.0);
 
             PoolRequestForm poolRequestForm = new PoolRequestForm(star1Avg, star2Avg);
 
