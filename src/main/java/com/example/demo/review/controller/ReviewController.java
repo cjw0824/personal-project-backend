@@ -37,5 +37,11 @@ public class ReviewController {
 
         return reviewService.readReview(id);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteReview (@PathVariable("id") Long id) {
+        log.info("deleteReview()");
+        reviewService.deleteReview(id);
+    }
 }
 

@@ -12,4 +12,6 @@ public interface ReviewService {
     List<Review> list();
 
     Review readReview(Long id);
+
+    void deleteReview(long id);
 }

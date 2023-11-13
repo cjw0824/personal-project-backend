@@ -1,5 +1,6 @@
 package com.example.demo.review.service;
 
+import com.example.demo.board.entity.Board;
 import com.example.demo.pool.entity.Pool;
 import com.example.demo.pool.repository.PoolRepository;
 import com.example.demo.review.controller.form.ReviewRequestForm;
@@ -61,5 +62,29 @@ public class ReviewServiceImpl implements ReviewService{
         }
 
         return maybeReview.get();
+    }
+
+    @Override
+    public void deleteReview(long reveiwId) {
+        //id로 리뷰찾기
+        Optional<Review> maybeReview = reviewRepository.findById(reveiwId);
+
+        if(maybeReview.isEmpty()) {
+            log.info("정보가 없습니다!");
+        } else {
+            //리뷰 정보
+            Review review = maybeReview.get();
+            String placeName = review.getPlaceName();
+            //수영장 정보
+            Optional<Pool> maybePool = poolRepository.findByPlaceName(placeName);
+            Pool pool = maybePool.get();
+            //수영장 정보 수정
+            pool.setReviewCnt(pool.getReviewCnt() - 1);
+            pool.setStarRating1Total(pool.getStarRating1Total() - review.getStarRating1());
+            pool.setStarRating2Total(pool.getStarRating2Total() - review.getStarRating2());
+            poolRepository.save(pool);
+            //리뷰삭제
+            reviewRepository.delete(review);
+        }
     }
 }

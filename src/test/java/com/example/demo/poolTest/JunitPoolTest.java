@@ -25,5 +25,4 @@ public class JunitPoolTest {
         System.out.println("starAvg1 = " + poolRequestForm.getStarRating1Avg());
         System.out.println("starAvg2 = " + poolRequestForm.getStarRating2Avg());
     }
-
 }

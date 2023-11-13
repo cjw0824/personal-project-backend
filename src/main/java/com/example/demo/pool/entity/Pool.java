@@ -15,7 +15,6 @@ import lombok.Setter;
 public class Pool {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name="id")
     private Long id;
     private String placeName;
     private int reviewCnt;
