@@ -1,17 +1,15 @@
 package com.example.demo.board.controller.form;
 
 import com.example.demo.board.entity.Board;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @Getter
-//@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 public class BoardRequestForm {
+    @Setter
     private String title;
+    @Setter
     private String content;
     private String userEmail;
 

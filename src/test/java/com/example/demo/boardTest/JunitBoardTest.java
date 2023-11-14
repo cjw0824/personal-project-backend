@@ -46,9 +46,19 @@ public class JunitBoardTest {
 
     @Test
     @DisplayName("테스트 게시물 삭제")
-
     void 테스트_게시물_삭제() {
         long boardId = 1L;
         boardService.deleteBoard(boardId);
+    }
+
+    @Test
+    @DisplayName("테스트 게시물 수정")
+    void MODIFY_BOARD() {
+        long boardId = 8L;
+        String content = "내용";
+        String title = "제목";
+        String userEmail = "test@test.com";
+        BoardRequestForm boardRequestForm = new BoardRequestForm(title, content, userEmail);
+        boardService.modifyBoard(boardId, boardRequestForm);
     }
 }

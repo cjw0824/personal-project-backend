@@ -48,4 +48,24 @@ public class BoardServiceImpl implements BoardService {
             boardRepository.deleteById(boardId);
         }
     }
+
+    @Override
+    public Board modifyBoard(long boardId, BoardRequestForm boardRequestForm) {
+        Optional<Board> maybeBoard = boardRepository.findByBoardId(boardId);
+        if(maybeBoard.isEmpty()){
+            log.info("정보가 없습니다!");
+            return null;
+        } else {
+            //수정 정보
+            String modifyTitle = boardRequestForm.getTitle();
+            String modifyContent = boardRequestForm.getContent();
+
+            //재설정 후 저장
+            Board board = maybeBoard.get();
+            board.setTitle(modifyTitle);
+            board.setContent(modifyContent);
+            boardRepository.save(board);
+            return board;
+        }
+    }
 }

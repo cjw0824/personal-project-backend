@@ -13,4 +13,6 @@ public interface BoardService {
     Board readBoard(Long boardId);
 
     void deleteBoard(long boardId);
+
+    Board modifyBoard(long boardId, BoardRequestForm boardRequestForm);
 }

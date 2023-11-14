@@ -46,4 +46,11 @@ public class BoardController {
         log.info("deleteBoard()");
         boardService.deleteBoard(boardId);
     }
+
+    @PutMapping("/modify/{boardId}")
+    public Board modifyBoard (@PathVariable("boardId") Long boardId,
+                             @RequestBody BoardRequestForm boardRequestForm) {
+        log.info("modifyBoard(), " + ", boardRequestForm: " + boardRequestForm + ", boardId: " + boardId);
+        return boardService.modifyBoard(boardId, boardRequestForm);
+    }
 }
